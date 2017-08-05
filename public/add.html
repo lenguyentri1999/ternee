@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<div id="A">
+  <h1 ui-sref="add">ADD ITEMS  <i class="fa fa-plus" aria-hidden="true"></i> </h1>
+  <h1 ui-sref="progress"> PROGRESS  <i class="fa fa-line-chart" aria-hidden="true"></i> </h1>
+  <h1 ui-sref="recipe"> RECIPE  <i class="fa fa-coffee" aria-hidden="true"></i></h1>
+</div>
+<div id="B">
+
+  <!-- SEARCH BAR -->
+   <div id="B1">
+    <input type="search" ng-change="clear()" ng-model="foodKey" placeholder="SEARCH FOOD ..."/>
+    <div id="B1A">
+      <div id="innerstatic2">
+        <div ng-click="getParentScope().addFood(food)"
+            ng-repeat="food in foodKeys | filter: foodKey | emptyifblank: foodKey">
+             {{food}} <span>
+             <i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="B2">
+    <h2>YOUR PANTRY </h2>
+    <div id="B2A">
+      <div id="innerstatic3">
+        <div ng-repeat="foodobj in selectedFoodList track by $index">
+          <i class="fa fa-caret-right" aria-hidden="true"></i>
+          {{foodobj.text}}
+          <span ng-click="Remove($index)"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+        </div>
+      </div>
+    </div>
+    <button id="pro" ui-sref="progress"> SEE PROGRESS </button>
+    <button id ="clear" ng-click="clearList()">CLEAR LIST</button>
+  </div>
+
+</div>

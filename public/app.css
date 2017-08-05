@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+body{
+  background: url('images/header.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+
+input:focus, textarea:focus, button:focus{
+  outline: none;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+h1{
+  color: white;
+  font-family: 'Lato', sans-serif;
+  line-height: 50px;
+  margin-left: 70px;
+  display: inline-block;
+  font-size: 25px;
+}
+
+h2{
+  font-family: 'Lato', sans-serif;
+}
+
+p{
+  font-family: 'Lato', sans-serif;
+  color: #626567;
+
+}
+
+#D1 h4{
+  font-weight: lighter;
+  margin-left: 10px;
+  color: #626567;
+}
+
+
+i{
+  margin-left: 7px;
+}
+
+input{
+  width: 90%;
+  height: 60px;
+  border: none;
+  font-family: 'Lato', sans-serif;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  color: #7B7D7D;
+  border-bottom: 0.1px solid #D7DBDD;
+  margin-left: 10px;
+}
+
+#error{
+  color: #C0392B;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+#success{
+  color: #138D75;
+  margin-left: 10px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+
+/* ------------------------ NAVIGATION BAR -------------------- */
+#A{
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0,0,0,0.7);
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.2);
+}
+
+
+#A h1:hover{
+  font-size: 27px;
+  cursor: pointer;
+}
+
+
+/* THE DIV THAT CONTAIN THE SEARCH BAR AND THE SEARCH RESULTS */
+#B1, #B2, #D1, #D2, #C{
+  position: fixed;
+  width: 450px;
+  background-color: white;
+  overflow: hidden;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.4);
+  top: 150px;
+  bottom: 100px;
+}
+
+#B1, #D1, #C {
+  left: 100px;
+}
+#B2, #D2{
+  right: 100px;
+}
+
+#C{
+  width: 1100px;
+
+}
+#C1{
+  margin-bottom: 30px; 
+}
+
+#innerstatic1, #innerstatic2 {
+  max-height:290px; overflow:auto; width:100%;
+}
+
+#innerstatic3{
+  max-height: 230px; overflow:auto; width:100%;
+}
+
+#innerstatic1::-webkit-scrollbar, #innerstatic2::-webkit-scrollbar, #innerstatic3::-webkit-scrollbar {
+    width: 1em;
+}
+
+#innerstatic1::-webkit-scrollbar-track, #innerstatic2::-webkit-scrollbar-track, #innerstatic3::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+
+#innerstatic1::-webkit-scrollbar-thumb, #innerstatic2::-webkit-scrollbar-thumb, #innerstatic3::-webkit-scrollbar-thumb {
+  background-color: black;
+
+}
+
+
+#B1A{
+  margin-top: 20px;
+  margin-left: 20px;
+  color: #626567;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+#B1A i{
+  color: #138D75;
+}
+
+
+::-webkit-input-placeholder {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  color: #A6ACAF;
+}
+
+
+#B2 button, #D1 button{
+  display: block;
+  border: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  color: white;
+}
+
+#B2 button{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#pro{
+  background: #138D75;
+}
+
+#clear{
+  background: #922B21;
+}
+
+#D1 button{
+  margin-top: 0px;
+  display: inline-block;
+  margin-left: 10px;
+  background: rgba(0,0,0,0.8);
+}
+
+
+#B2A{
+  font-size: 17px;
+  font-family: 'Lato', sans-serif;
+  line-height: 30px;
+  color: #4D5656;
+}
+
+#B2A i{
+  margin-right: 10px;
+}
+
+#B2A span{
+  display: inline-block;
+  float: right;
+}
+
+
+#D2 h2, p{
+  text-align: center;
+}
+
+#D2 img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  border: none;
+
+}
+
+#D2 a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #138D75;
+}
+
+#D2 a:hover{
+  font-size: 22px;
+}
+
+#D1 p{
+  margin-left: -20px;
+}
+
+
+
+/* ------------------- WHEN SCREEN SIZE CHANGE ---------------- */
+@media only screen and (max-width: 1000px) {
+    #B1, #D1 {
+        position: relative;
+        z-index: -1;
+        height: 200px;
+    }
+
+    #B2, #D2 {
+        position: relative;
+        margin-left: 200px;
+        z-index: -1;
+        margin-top: 100px;
+
+    }
+}
+
+/*--------------------- BAR CHART WITH CSS --------------------------*/
+#bar{
+  height: 30px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  padding-left: 10px;
+  padding-top: 7px;
+}
