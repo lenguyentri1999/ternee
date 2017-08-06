@@ -1,27 +1,66 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
+@import 'libs/skel';
 
 /*
-	Tessellate by HTML5 UP
+	Photon by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Main Sections */
+/* Header */
 
-	.main {
-		> .content {
-			&.style1 {
-				background: url('images/bgtr.svg') top right no-repeat, url('images/bgbl.svg') bottom left no-repeat, url('images/bgbl.svg') bottom left no-repeat, url('images/overlay.png'), url('images/ie/content-style1.svg');
-			}
+	#header {
+		$from: _palette(accent3-alt);
+		$to: _palette(accent6-alt);
 
-			&.style2 {
-				background: url('images/bgtr.svg') top right no-repeat, url('images/bgbl.svg') bottom left no-repeat, url('images/bgbl.svg') bottom left no-repeat, url('images/overlay.png'), url('images/ie/content-style2.svg');
-			}
+		background-image: none;
+		filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#{$from}", endColorStr="#{$to}", GradientType=1);
+		position: relative;
 
-			&.style3 {
-				background: url('images/bgtr.svg') top right no-repeat, url('images/bgbl.svg') bottom left no-repeat, url('images/bgbl.svg') bottom left no-repeat, url('images/overlay.png'), url('images/ie/content-style3.svg');
-			}
+		&:before {
+			background-image:		url('images/overlay2.png'),		url('images/overlay3.svg');
+			background-position:	top left,							center center;
+			background-size:		auto,								cover;
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		> * {
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+/* Footer */
+
+	#footer {
+		$from: _palette(accent6-alt);
+		$to: _palette(accent3-alt);
+
+		background-image: none;
+		filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#{$from}", endColorStr="#{$to}", GradientType=1);
+		position: relative;
+
+		&:before {
+			background-image:		url('images/overlay2.png'),		url('images/overlay4.svg');
+			background-position:	top left,							center center;
+			background-size:		auto,								cover;
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		> * {
+			position: relative;
+			z-index: 1;
 		}
 	}
